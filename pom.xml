@@ -35,5 +35,37 @@
             <version>4.18.1</version>
         </dependency>
     </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.2.5</version>
+                <configuration>
+                    <includes>
+                        <!-- Accounts package -->
+                        <include>Accounts.Scenario1.java</include>
+                        <include>Accounts.Scenario2.java</include>
 
+                        <!-- createAccount package -->
+                        <include>createAccount.Scenario1.java</include>
+                        <include>createAccount.Scenario2.java</include>
+                        <include>createAccount.Scenario3.java</include>
+
+                        <!-- login package -->
+                        <include>login.Scenario1.java</include>
+                        <include>login.Scenario2.java</include>
+
+                        <!-- plans package -->
+                        <include>plans.Scenario1.java</include>
+                        <include>plans.Scenario2.java</include>
+
+                        <!-- userProfile package -->
+                        <include>userProfile.Scenario1.java</include>
+                        <include>userProfile.Scenario2.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
